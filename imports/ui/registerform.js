@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import NavBar from './navbar';
 import { Input , Row , option , Icon , Button } from 'react-materialize';
 import { Users } from '../api/Users';
 
@@ -27,7 +28,10 @@ import { Users } from '../api/Users';
     }
   render() {
     return (
-      <div className="container">
+     
+      <div>
+       <NavBar />
+        <div className="container">
             <Row>
                 <form onSubmit={this.submitform.bind(this)}>
                     <Input  s={12}   type="text" name="firstname" placeholder="First Name" />
@@ -36,6 +40,7 @@ import { Users } from '../api/Users';
                     <Button waves='light'   type="submit" name="action" className="red">Submit </Button>
                  </form>
             </Row>
+          </div>
       </div>
     )
   }
